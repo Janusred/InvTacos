@@ -13,3 +13,16 @@ CREATE TABLE producto (
 
 
 DESCRIBE game;
+
+
+
+CREATE TABLE vidrio (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(180),
+    refri_inicio int(11),
+    completo_inicio int(11),
+    refri_fin int(180),
+    completo_fin
+    faltante
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

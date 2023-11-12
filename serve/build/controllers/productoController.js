@@ -15,14 +15,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 class ProductoController {
     list(req, res) {
-        res.json({ text: 'listando productos' });
+        return __awaiter(this, void 0, void 0, function* () {
+            //const {id} = req.params;
+            const producto = yield database_1.default.query('SELECT * FROM Indio');
+            res.json(producto);
+        });
     }
     getOne(req, res) {
-        res.json({ text: 'Este producto es ' + req.params.id });
+        return __awaiter(this, void 0, void 0, function* () {
+            //res.json({text:'Este producto es '+req.params.id});
+            const { id } = req.params;
+            const producto = yield database_1.default.query('SELECT * FROM Indio WHERE id = ?', [id]);
+            if (producto.lenth > 0) {
+                return res.json(producto[0]);
+            }
+            res.status(404).json({ text: 'no existe' });
+        });
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO producto set ?', [req.body]);
+            yield database_1.default.query('INSERT INTO Indio set ?', [req.body]);
             res.json({ message: 'Guardando producto ' });
         });
     }
