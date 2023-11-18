@@ -1,0 +1,88 @@
+<h1 style="text-align: center; color: #008080;">Ingreso de inventario</h1>
+
+<div class="container">
+    <div class="row">
+        <!-- Columna del formulario -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form action="">
+                      <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre" class="form-control" >
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="refri_inicio" placeholder="Inicio de dia" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="completo_inicio" placeholder="En bodega" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="refri_fin" placeholder="Final del dia" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="completo_fin" placeholder="en bodega" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="Existencia" placeholder="existencia" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="faltante" placeholder="Faltante" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="venta" placeholder="Venta" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <div class="form-group">
+                        <input type="text" name="total" placeholder="Total" class="form-control" autofocus onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                      </div>
+                      <hr><!--division de input-->
+                      <button class="btn btn-success btn-block" >
+                        Guardar
+                      </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna de la tabla -->
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Nombre</th> 
+                          <th scope="col">Al Inicio</th>
+                          <th scope="col">Al Final</th>
+                          <th scope="col">Total</th>
+                          
+                          <th scope="col" style="background-color: #3498db; color: white;">Ultimo ingreso</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <tr *ngFor="let coca of latascoca">
+                            <th scope="row">{{coca.id}}</th>
+                            <td>{{coca.nombre}}</td>
+                            <td>{{coca.refri_inicio}}</td>
+                            <td>{{coca.completo_inicio}}</td>
+                            <td>{{coca.suma_total}}</td>
+                           
+                            <td>{{coca.created_at | date:'HH:mm dd-MM-yy'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+      

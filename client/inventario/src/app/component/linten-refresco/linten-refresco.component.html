@@ -1,0 +1,100 @@
+<div class="container">
+    <h1 style="text-align: center; color: #008080;">Inventario de Refresco (Suma)</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th> 
+                    <th scope="col">Al Inicio</th>
+                    <th scope="col">Al Final</th>
+                    <th scope="col">Suma Total al inicio</th>
+                    
+                    <th scope="col" style="background-color: #3498db; color: white;">Fecha de ingreso</th>
+                   
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let coca of latascoca">
+                    <th scope="row">{{coca.id}}</th>
+                    <td>{{coca.nombre}}</td>
+                    <td>{{coca.refri_inicio}}</td>
+                    <td>{{coca.completo_inicio}}</td>
+                    <td>{{coca.suma_total}}</td>
+                   
+                    <td>{{coca.created_at | date:'HH:mm dd-MM-yy'}}</td>
+                   
+                  </tr>
+                </tbody>
+              </table>
+
+
+
+
+              <h1 style="text-align: center; color: #008080;">Inventario de Refresco Fresca</h1>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th> 
+                    <th scope="col">Al Inicio</th>
+                    <th scope="col">Al Final</th>
+                    <th scope="col">Faltante</th>
+                    <th scope="col">Venta</th>
+                    <th scope="col">Total</th>
+                    <th scope="col" style="background-color: #3498db; color: white;">Fecha de ingreso</th>
+                    <th scope="col">Accion </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let fresca of latasfresca">
+                    <th scope="row">{{fresca.id}}</th>
+                    <td>{{fresca.nombre}}</td>
+                    <td>{{fresca.refri_inicio}}</td>
+                    <td>{{fresca.refri_fin}}</td>
+                    <td>{{fresca.faltante}}</td>
+                    <td>{{fresca.refri_inicio - fresca.refri_fin}}</td>
+                    <td>{{fresca.refri_inicio + fresca.refri_fin}}</td>
+                    
+                    <td>{{fresca.created_at | date:'HH:mm dd-MM-yy'}}</td>
+                    <td>{{fresca.total - fresca.venta}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h1>TABLA DE Coca</h1>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th> 
+                    <th scope="col">Al Inicio</th>
+                    <th scope="col">Al Final</th>
+                    <th scope="col">Faltante</th>
+                    <th scope="col">Venta</th>
+                    <th scope="col">Total</th>
+                    <th scope="col" style="background-color: #3498db; color: white;">Fecha de ingreso</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let suma of sumafresca">
+                    <th scope="row">{{suma.id}}</th>
+                    <td>{{suma.suma_total}}</td>
+                    <td>{{suma.refri_inicio}}</td>
+                    <td>{{suma.refri_fin}}</td>
+                    <td>{{suma.suma_total}}</td>
+                    <td>{{suma.refri_inicio - suma.refri_fin}}</td>
+                    <td>{{suma.refri_inicio + suma.refri_fin}}</td>
+                    <td>{{suma.total - suma.venta}}</td>
+                    <td>{{suma.created_at | date:'HH:mm dd-MM-yy'}}</td>
+                  
+                  </tr>
+                </tbody>
+              </table>
+
+          </div>
+    

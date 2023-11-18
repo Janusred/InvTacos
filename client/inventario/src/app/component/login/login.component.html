@@ -1,0 +1,23 @@
+<div class="login-container">
+    
+    <form (ngSubmit)="login()">
+        <img src="https://i.pinimg.com/736x/48/14/08/4814089754f36f11b889f52040807a54.jpg" class="card-img-top" alt="...">
+        <hr>
+      <div>
+        <label for="username">Usuario:</label>
+        <input type="text" id="password" name="username"  [(ngModel)]="username" required class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+      <hr>
+      <div class="input-group flex-nowrap">
+       <label for="password"></label>
+        <input type="password" id="password" name="password"  [(ngModel)]="password" required class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+    
+      <button  (click)="login()" routerLink="form" routerLinkActive="active">Login</button>
+    </form>
+  </div>
+  
+
+
+
+

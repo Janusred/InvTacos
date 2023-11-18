@@ -10,11 +10,9 @@ class ProductoRoutes{
         this.config();
     }
     config():void{
-        this.router.get('/',productoController.list);
-        this.router.get('/:id',productoController.getOne);
-        this.router.post('/',productoController.create);
-        this.router.put('/:id',productoController.update);
-        this.router.delete('/:id',productoController.delete);
+        this.router.get('/fr',productoController.fresca);
+        this.router.get('/co',productoController.coca);
+        this.router.get('/sf',productoController.sumafresca);
     }
 }
 

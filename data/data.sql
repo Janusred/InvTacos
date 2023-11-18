@@ -2,7 +2,7 @@ CREATE DATABASE tacos;
 
 USE tacos;
 
-CREATE TABLE producto (
+CREATE TABLE Indio (
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(180),
     precio_u int(11),

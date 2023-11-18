@@ -14,11 +14,9 @@ class ProductoRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', productoController_1.default.list);
-        this.router.get('/:id', productoController_1.default.getOne);
-        this.router.post('/', productoController_1.default.create);
-        this.router.put('/:id', productoController_1.default.update);
-        this.router.delete('/:id', productoController_1.default.delete);
+        this.router.get('/fr', productoController_1.default.fresca);
+        this.router.get('/co', productoController_1.default.coca);
+        this.router.get('/sf', productoController_1.default.sumafresca);
     }
 }
 const productoRoutes = new ProductoRoutes();
