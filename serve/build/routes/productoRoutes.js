@@ -17,6 +17,7 @@ class ProductoRoutes {
         this.router.get('/fr', productoController_1.default.fresca);
         this.router.get('/co', productoController_1.default.coca);
         this.router.get('/sf', productoController_1.default.sumafresca);
+        this.router.get('/sct', productoController_1.default.sct);
     }
 }
 const productoRoutes = new ProductoRoutes();

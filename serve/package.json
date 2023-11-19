@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "@types/cors": "^2.8.14",
-    "@types/morgan": "^1.9.5",
-    "@types/mysql": "^2.15.21",
+    "@types/cors": "^2.8.16",
+    "@types/morgan": "^1.9.9",
+    "@types/mysql": "^2.15.24",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "morgan": "^1.10.0",

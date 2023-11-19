@@ -13,6 +13,7 @@ class ProductoRoutes{
         this.router.get('/fr',productoController.fresca);
         this.router.get('/co',productoController.coca);
         this.router.get('/sf',productoController.sumafresca);
+        this.router.get('/sct',productoController.sct);
     }
 }
 
