@@ -13,9 +13,11 @@ export class ProductoService {
 
   FRESCA = 'http://localhost:3000/api/producto/fr';
 
-  COCA = 'http://localhost:3000/api/producto/sf'
+  COCA = 'http://localhost:3000/api/producto/sf';
 
-  SUMAFRESCA = 'http://localhost:3000/api/producto/co'
+  SUMAFRESCA = 'http://localhost:3000/api/producto/co';
+
+  SUMACOLUMNA = 'http://localhost:3000/api/producto/sct';
 
   constructor(private http:HttpClient) {
    }
@@ -25,6 +27,7 @@ export class ProductoService {
     this.getFr();
     this.getCo();
     this.getSf();
+    this.getColumna();
   }
    getInv(){
     return this.http.get(`${this.API}/producto`);
@@ -39,5 +42,8 @@ export class ProductoService {
   }
   getSf(){
     return this.http.get(`${this.SUMAFRESCA}`);
+  }
+  getColumna(){
+    return this.http.get(`${this.SUMACOLUMNA}`)
   }
 }

@@ -13,6 +13,7 @@ import { FormRefrescoComponent } from './component/form-refresco/form-refresco.c
 import { LoginComponent } from './component/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { ReportComponent } from './component/report/report.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     LintenRefrescoComponent,
     FormRefrescoComponent,
-    LoginComponent
+    LoginComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,

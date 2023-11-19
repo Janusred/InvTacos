@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th> 
+        <th scope="col">Al Inicio</th>
+        <th scope="col">Al Final</th>
+        <th scope="col">Suma Total al inicio</th>
+        
+        <th scope="col" style="background-color: #3498db; color: white;">Fecha de ingreso</th>
+       
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coca of sumacolumnatotal">
+        <th scope="row">{{coca.id}}</th>
+        <td>{{coca.nombres_concatenados}}</td>
+        <td>{{coca.suma_refri_inicio}}</td>
+        <td>{{coca.completo_inicio}}</td>
+        <td>{{coca.suma_total}}</td>
+       
+        <td>{{coca.created_at | date:'HH:mm dd-MM-yy'}}</td>
+       
+      </tr>
+    </tbody>
+  </table>
